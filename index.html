@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Listening Practice</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            padding: 30px;
+            font-size: 1.5rem;
+            line-height: 2.5;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .sentence {
+            cursor: pointer;
+            padding: 8px 12px;
+            border-radius: 8px;
+            transition: background-color 0.2s;
+        }
+        .sentence:hover {
+            background-color: #f0f0f0; /* สีพื้นหลังเมื่อเอาเมาส์ไปชี้ */
+        }
+        /* Style ที่จะแสดงตอนกำลังเล่นเสียง */
+        .sentence.playing {
+            background-color: #d0eaff;
+            color: #0056b3;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Listening & Speaking Practice 🎧</h1>
+    <p>Click on a sentence to hear the pronunciation.</p>
+
+    <div class="sentence" data-audio="audio/s1.wav">
+        Hello, how are you?
+    </div>
+
+    <div class="sentence" data-audio="audio/my-name-is.wav">
+        My name is Gemini.
+    </div>
+
+    <div class="sentence" data-audio="audio/nice-to-meet-you.wav">
+        It's nice to meet you.
+    </div>
+
+    <script>
+        // รอให้หน้าเว็บโหลดให้เสร็จก่อน
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // เลือกทุก element ที่มี class 'sentence'
+            const sentences = document.querySelectorAll('.sentence');
+
+            sentences.forEach(sentence => {
+                sentence.addEventListener('click', () => {
+                    // 1. ดึงชื่อไฟล์เสียงจาก data-audio attribute
+                    const audioSrc = sentence.getAttribute('data-audio');
+
+                    // 2. ถ้ามีชื่อไฟล์เสียงอยู่
+                    if (audioSrc) {
+                        // 3. สร้าง Object เสียงขึ้นมาใหม่
+                        const audio = new Audio(audioSrc);
+
+                        // 4. สั่งให้เล่นเสียง
+                        audio.play();
+
+                        // --- ส่วนเสริม: เพิ่ม Effect ตอนกำลังเล่น ---
+                        // เพิ่ม class 'playing' เพื่อเปลี่ยนสีพื้นหลัง
+                        sentence.classList.add('playing');
+
+                        // เมื่อเสียงเล่นจบ ให้เอา class 'playing' ออก
+                        audio.addEventListener('ended', () => {
+                            sentence.classList.remove('playing');
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
