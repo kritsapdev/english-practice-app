@@ -1,0 +1,64 @@
+/* ===== สไตล์หลักสำหรับ Card UI (ปรับเป็นสี่เหลี่ยมตรง) ===== */
+
+/* ตัวที่คลุม Card ทั้งหมด */
+.card-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* จัดให้อยู่กลางจอ */
+    gap: 1.5rem; /* ปรับระยะห่างระหว่าง Card */
+}
+
+.brand-logo {
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    
+}
+/* สไตล์ของ Card แต่ละอัน (แบบสี่เหลี่ยมตรง) */
+.topic-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--card-background);
+    color: var(--primary-color);
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+
+    width: 90%;
+    max-width: 350px;
+    padding: 2.5rem 1rem;
+
+    /* --- ส่วนที่ทำให้เป็นสี่เหลี่ยมตรง --- */
+    border: 3px solid var(--border-color);
+    border-radius: 0; /* ทำให้มุมเป็นเหลี่ยม */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* เปลี่ยนเป็นเงาแบบปกติ */
+    /* transform: rotate(-2deg); << ลบการเอียงออก */
+
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* ลบโค้ดส่วนนี้ออกไปได้เลย เพราะเราไม่ต้องการให้เอียงสลับกันอีกแล้ว */
+/*
+.topic-card:nth-child(even) {
+    transform: rotate(2.5deg);
+}
+*/
+
+/* --- เอฟเฟกต์ตอนเอาเมาส์ชี้ (สำหรับ Desktop) --- */
+@media (min-width: 768px) {
+    .topic-card:hover {
+        transform: translateY(-5px); /* ขยับขึ้นเล็กน้อยเมื่อเมาส์ชี้ */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    /* ลบโค้ดส่วนนี้ออกไปได้เลย */
+    /*
+    .topic-card:nth-child(even):hover {
+        transform: translate(-5px, -5px) rotate(2.5deg);
+    }
+    */
+}

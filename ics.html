@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morning Conversation - Engpra</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main>
+<div class="sentence" data-audio="audio/s1.wav">
+    (S1)    Good morning, distinguished committee members, honored guests, and all attendees.
+    </div>
+
+    <div class="sentence" data-audio="audio/s2.wav" style="background-color: #dcdbdb;">
+    (S2)    My name is Krisana Sapsinchai, from the Thai-Nichi Institute of Technology.
+    </div>
+
+    <div class="sentence" data-audio="audio/s3.wav">
+    (S3)    Today, I am honored to present my research on the topic
+    </div>
+
+    <div class="sentence" data-audio="audio/s4.wav" style="background-color: #dcdbdb;">
+    (S4)    A Retrieval-Augmented Generation System for a Legal Advisory System in Thai Consumer Protection.
+    </div>
+    
+    <div class="sentence" data-audio="audio/s5.wav">
+    (S5)    The e-commerce market in Thailand has experienced exponential growth in recent years
+    </div>
+
+    <div class="sentence" data-audio="audio/s6.wav" style="background-color: #dcdbdb;">
+    (S6)    The retail and wholesale sector's value increased from 2.5 trillion baht in 2021 to over 2.8 trillion baht in 2023
+    </div>
+
+    <div class="sentence" data-audio="audio/s7.wav">
+    (S7)    However, this rapid growth has led to a corresponding increase in consumer complaints
+    </div>
+
+    <div class="sentence" data-audio="audio/s8.wav" style="background-color: #dcdbdb;">
+    (S8)    particularly concerning exploitation by online sellers
+    </div>    
+ 
+    <div class="sentence" data-audio="audio/s9.wav">
+    (S9)    Unfortunately, accessing legal experts is often costly and time-consuming,
+    </div>    
+
+    <div class="sentence" data-audio="audio/s10.wav" style="background-color: #dcdbdb;">
+    (S10)    leaving many consumers without the protection they rightfully deserve
+    </div> 
+
+    <div class="sentence" data-audio="audio/s11.wav">
+    (S11)    Therefore, this research aims to develop a preliminary advisory system
+    </div>    
+
+    <div class="sentence" data-audio="audio/s12.wav" style="background-color: #dcdbdb;">
+    (S12)    for Thai consumer protection law to serve as a guide and bridge this accessibility gap.
+    </div>  
+    
+    <div class="sentence" data-audio="audio/s13.wav">
+    (S13)    Our system utilizes Generative AI technology
+    </div> 
+
+    <div class="sentence" data-audio="audio/s14.wav" style="background-color: #dcdbdb;">
+    (S14)    with its core being a technique called Retrieval-Augmented Generation (RAG)
+    </div>
+    
+    <div class="sentence" data-audio="audio/s15.wav">
+    (S15)    This approach is fundamentally different from the conventional fine-tuning of Large Language Models (LLMs).
+    </div> 
+
+    <div class="sentence" data-audio="audio/s16.wav" style="background-color: #dcdbdb;">
+    (S16)    Why RAG?. The primary advantage of RAG. is its ability. to mitigate the problem of Hallucination.
+    </div> 
+
+    <div class="sentence" data-audio="audio/s17.wav">
+    (S17)     where the AI generates incorrect. or fabricated information.
+    </div>
+
+    <div class="sentence" data-audio="audio/s18.wav" style="background-color: #dcdbdb;">
+    (S18)     The system first "Retrieves" information from a curated Knowledge Base we have prepared
+    </div>
+
+    <div class="sentence" data-audio="audio/s19.wav">
+    (S19)     Then, it "Generates" an answer based exclusively on the retrieved data.
+    </div>
+
+    <div class="sentence" data-audio="audio/s20.wav" style="background-color: #dcdbdb;">
+    (S20)     This ensures that the answers are reliable and legally accurate.
+    </div>
+
+    <div class="sentence" data-audio="audio/s21.wav">
+    (S21)     Furthermore, if there are new legal updates, they can be quickly integrated into the system.
+    </div>
+
+    <div class="sentence" data-audio="audio/s22.wav" style="background-color: #dcdbdb;">
+    (S22)     Our process began with Dataset Collection. We gathered data from two primary sources
+    </div>
+    <script>
+        // รอให้หน้าเว็บโหลดให้เสร็จก่อน
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // เลือกทุก element ที่มี class 'sentence'
+            const sentences = document.querySelectorAll('.sentence');
+
+            sentences.forEach(sentence => {
+                sentence.addEventListener('click', () => {
+                    // 1. ดึงชื่อไฟล์เสียงจาก data-audio attribute
+                    const audioSrc = sentence.getAttribute('data-audio');
+
+                    // 2. ถ้ามีชื่อไฟล์เสียงอยู่
+                    if (audioSrc) {
+                        // 3. สร้าง Object เสียงขึ้นมาใหม่
+                        const audio = new Audio(audioSrc);
+
+                        // 4. สั่งให้เล่นเสียง
+                        audio.play();
+
+                        // --- ส่วนเสริม: เพิ่ม Effect ตอนกำลังเล่น ---
+                        // เพิ่ม class 'playing' เพื่อเปลี่ยนสีพื้นหลัง
+                        sentence.classList.add('playing');
+
+                        // เมื่อเสียงเล่นจบ ให้เอา class 'playing' ออก
+                        audio.addEventListener('ended', () => {
+                            sentence.classList.remove('playing');
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
