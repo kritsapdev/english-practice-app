@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Morning Conversation - Engpra</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+
+    <main>
+      <div class="sentence" data-audio="audio/aieng/a1.wav">
+        If I could use only one word to describe AI post-2020, it’d be scale.
+      </div>
+
+      <div
+        class="sentence"
+        data-audio="audio/aieng/a2.wav"
+        style="background-color: #dcdbdb"
+      >
+        The AI models behind applications like ChatGPT, Google’s Gemini, and Midjourney
+      </div>
+
+      <div class="sentence" data-audio="audio/aieng/a3.wav">
+        are at such a scale that they’re consuming a nontrivial portion of the world’s electricity, 
+      </div>
+
+      <div
+        class="sentence"
+        data-audio="audio/s4.wav"
+        style="background-color: #dcdbdb"
+      >
+        and we’re at risk of running out of publicly available internet data to train them.
+      </div>
+
+      <div class="sentence" data-audio="audio/s5.wav">
+        (S5) The e-commerce market in Thailand has experienced exponential
+        growth in recent years
+      </div>
+
+      <div
+        class="sentence"
+        data-audio="audio/s6.wav"
+        style="background-color: #dcdbdb"
+      >
+        (S6) The retail and wholesale sector's value increased from 2.5 trillion
+        baht in 2021 to over 2.8 trillion baht in 2023
+      </div>
+
+      <div class="sentence" data-audio="audio/s7.wav">
+        (S7) However, this rapid growth has led to a corresponding increase in
+        consumer complaints
+      </div>
+
+      <div
+        class="sentence"
+        data-audio="audio/s8.wav"
+        style="background-color: #dcdbdb"
+      >
+        (S8) particularly concerning exploitation by online sellers
+      </div>
+
+      <div class="sentence" data-audio="audio/s9.wav">
+        (S9) Unfortunately, accessing legal experts is often costly and
+        time-consuming,
+      </div>
+
+      <div
+        class="sentence"
+        data-audio="audio/s10.wav"
+        style="background-color: #dcdbdb"
+      >
+        (S10) leaving many consumers without the protection they rightfully
+        deserve
+      </div>
+
+      <div class="sentence" data-audio="audio/s11.wav">
+        (S11) Therefore, this research aims to develop a preliminary advisory
+        system
+      </div>
+
+      <div
+        class="sentence"
+        data-audio="audio/s12.wav"
+        style="background-color: #dcdbdb"
+      >
+        (S12) for Thai consumer protection law to serve as a guide and bridge
+        this accessibility gap.
+      </div>
+
+      <div class="sentence" data-audio="audio/s13.wav">
+        (S13) Our system utilizes Generative AI technology
+      </div>
+
+      <div
+        class="sentence"
+        data-audio="audio/s14.wav"
+        style="background-color: #dcdbdb"
+      >
+        (S14) with its core being a technique called Retrieval-Augmented
+        Generation (RAG)
+      </div>
+
+      <div class="sentence" data-audio="audio/s15.wav">
+        (S15) This approach is fundamentally different from the conventional
+        fine-tuning of Large Language Models (LLMs).
+      </div>
+
+      <div
+        class="sentence"
+        data-audio="audio/s16.wav"
+        style="background-color: #dcdbdb"
+      >
+        (S16) Why RAG?. The primary advantage of RAG. is its ability. to
+        mitigate the problem of Hallucination.
+      </div>
+
+      <div class="sentence" data-audio="audio/s17.wav">
+        (S17) where the AI generates incorrect. or fabricated information.
+      </div>
+
+      <div
+        class="sentence"
+        data-audio="audio/s18.wav"
+        style="background-color: #dcdbdb"
+      >
+        (S18) The system first "Retrieves" information from a curated Knowledge
+        Base we have prepared
+      </div>
+
+      <div class="sentence" data-audio="audio/s19.wav">
+        (S19) Then, it "Generates" an answer based exclusively on the retrieved
+        data.
+      </div>
+
+      <div
+        class="sentence"
+        data-audio="audio/s20.wav"
+        style="background-color: #dcdbdb"
+      >
+        (S20) This ensures that the answers are reliable and legally accurate.
+      </div>
+
+      <div class="sentence" data-audio="audio/s21.wav">
+        (S21) Furthermore, if there are new legal updates, they can be quickly
+        integrated into the system.
+      </div>
+
+      <div
+        class="sentence"
+        data-audio="audio/s22.wav"
+        style="background-color: #dcdbdb"
+      >
+        (S22) Our process began with Dataset Collection. We gathered data from
+        two primary sources
+      </div>
+
+      <div class="sentence" data-audio="audio/s23.wav">
+        (S23) Official Legal Documents: Including acts such as the Consumer
+        Protection Act, the Drug Act, and the Food Act
+      </div>
+
+      <div
+        class="sentence"
+        data-audio="audio/s24.wav"
+        style="background-color: #dcdbdb"
+      >
+        (S24) sourced from the website of the Office of the Consumer Protection
+        Board (OCPB). A total of 11 acts were collected.
+      </div>
+
+      <div class="sentence" data-audio="audio/s25.wav">
+        (S25) Articles and Case Studies: From the Thailand Consumer Council, we
+        collected 47 articles to gain insights into real-world applications and
+        consumer issues.
+      </div>
+
+      <div
+        class="sentence"
+        data-audio="audio/s26.wav"
+        style="background-color: #dcdbdb"
+      >
+        (S26) In this research, we introduce Semantic Legal Preprocessing (SLP).
+        This is our core solution to the limitations of traditional RAG
+      </div>
+
+      <div class="sentence" data-audio="audio/s27.wav">
+        (S27) which often relies on simplistic, fixed-size chunking based on
+        token count or character length.
+      </div>
+
+      <div
+        class="sentence"
+        data-audio="audio/s28.wav"
+        style="background-color: #dcdbdb"
+      >
+        (S28) In a legal context, this method is highly inadequate, as arbitrary
+        splits can disrupt the continuity of statutes, definitions, and complex
+        legal arguments,
+      </div>
+
+      <div class="sentence" data-audio="audio/s29.wav">
+        (S29) thereby destroying semantic integrity and hindering accurate
+        reasoning.
+      </div>
+
+      <div
+        class="sentence"
+        data-audio="audio/s30.wav"
+        style="background-color: #dcdbdb"
+      >
+        (S30) The SLP process involves feeding the raw dataset,
+      </div>
+
+      <div class="sentence" data-audio="audio/s31.wav">
+        (S31) along with specialized Prompt Engineering, into ChatGPT-4o.
+      </div>
+
+      <div
+        class="sentence"
+        data-audio="audio/s32.wav"
+        style="background-color: #dcdbdb"
+      >
+        (S32) This transforms complex Thai legal documents into a structured
+        Question-Answer-Explanation-Sample (Q-A-E-S) format.
+      </div>
+      <div class="sentence" data-audio="audio/s33.wav">
+        (S33) The Q-A-E-S structure ensures that each vector entry is a complete
+      </div>
+      <div
+        class="sentence"
+        data-audio="audio/s34.wav"
+        style="background-color: #dcdbdb"
+      >
+        (S34) self-contained unit of legal knowledge. This significantly
+        improves retrieval quality and the coherence of the generated responses.
+      </div>
+      <div class="sentence" data-audio="audio/s35.wav">
+        (S35) The outcome of this process is a semantically rich dataset ready
+        for use, comprising a total of 2,000 rows.
+      </div>
+      <div
+        class="sentence"
+        data-audio="audio/s36.wav"
+        style="background-color: #dcdbdb"
+      >
+        (S36) Next, we convert the data processed by SLP into numerical vectors
+        using an Embedding Model.
+      </div>
+      <div class="sentence" data-audio="audio/s37.wav">
+        (S37) This data is then stored in a private cloud vector database
+        service,
+      </div>
+      <div
+        class="sentence"
+        data-audio="audio/s38.wav"
+        style="background-color: #dcdbdb"
+      >
+        (S38) enabling rapid retrieval of information that is semantically
+        similar to the user's query.
+      </div>
+      <div class="sentence" data-audio="audio/s39.wav">
+        (S39) For this research, we selected and tested six different Embedding
+        Models.
+      </div>
+      <div
+        class="sentence"
+        data-audio="audio/s40.wav"
+        style="background-color: #dcdbdb"
+      >
+        (S40) Each model supports the Thai language and is capable of handling a
+        high number of tokens.
+      </div>
+      <div class="sentence" data-audio="audio/s41.wav">
+        (S41) Our evaluation was conducted in two parts: Embedding Model
+        Evaluation and Generation Model Evaluation.
+      </div>
+      <div
+        class="sentence"
+        data-audio="audio/s42.wav"
+        style="background-color: #dcdbdb"
+      >
+        (S42) For the Embedding Model Evaluation, we tested the six models using
+        standard metrics
+      </div>
+      <div class="sentence" data-audio="audio/s43.wav">
+        (S43) Mean Reciprocal Rank (MRR), Hit Rate, and Precision, against 25%
+        of the questions from our database.
+      </div>
+      <div
+        class="sentence"
+        data-audio="audio/s44.wav"
+        style="background-color: #dcdbdb"
+      >
+        (S44) The results showed that the BGE-M3 model achieved the highest MRR
+        score of 0.54,
+      </div>
+      <div class="sentence" data-audio="audio/s45.wav">
+        (S45) indicating its effectiveness in ranking the correct answer near
+        the top. Meanwhile,
+      </div>
+      <div
+        class="sentence"
+        data-audio="audio/s46.wav"
+        style="background-color: #dcdbdb"
+      >
+        (S46) the WangchanX-Legal-ThaiCCL-Retriever model scored the highest on
+        both Hit Rate and Precision at 0.71,
+      </div>
+      <div class="sentence" data-audio="audio/s47.wav">
+        (S47) demonstrating its superior accuracy in retrieving relevant
+        information.
+      </div>
+      <div
+        class="sentence"
+        data-audio="audio/s48.wav"
+        style="background-color: #dcdbdb"
+      >
+        (S48) For the generation part of the system, we selected three Small
+        Language Models (SLMs) for testing.
+      </div>
+      <div class="sentence" data-audio="audio/s49.wav">
+        (S49) These models support the Thai language and are computationally
+        efficient due to their smaller size.
+      </div>
+      <div
+        class="sentence"
+        data-audio="audio/s50.wav"
+        style="background-color: #dcdbdb"
+      >
+        (S50) For the Generation phase, we paired the best-performing embedding
+        model with three Small Language Models (SLMs):
+      </div>
+      <div class="sentence" data-audio="audio/s51.wav">
+        (S51) Llama3.2, Typhoon, and OpenThaiGPT. We evaluated their performance
+        using the Faithfulness metric,
+      </div>
+            <div class="sentence" data-audio="audio/s52.wav" style="background-color: #dcdbdb">
+        (S52)  which measures whether the generated answer is factually grounded in the retrieved documents.
+      </div>
+               <div class="sentence" data-audio="audio/s53.wav" >
+        (S53) Based on 100 test questions, the Scb10x-typhoon2.1-gemma3 model achieved the highest Faithfulness score of 0.1249,
+      </div>
+                     <div class="sentence" data-audio="audio/s54.wav" style="background-color: #dcdbdb">
+        (S54)outperforming the other models. This highlights its potential to generate trustworthy answers and effectively avoid hallucination, as demonstrated in the examples.
+      </div>
+                           <div class="sentence" data-audio="audio/s55.wav" >
+        (S55)In conclusion, this research demonstrates that using an embedding model specifically tuned for Thai legal data, 
+      </div>
+             <div class="sentence" data-audio="audio/s56.wav" style="background-color: #dcdbdb">
+        (S56)combined with our proposed SLP technique, can significantly enhance the performance of a RAG system.
+      </div>
+              <div class="sentence" data-audio="audio/s57.wav">
+        (S57)Furthermore, we found that Small Language Models (SLMs) can yield strong results for legal tasks, offering a resource-efficient alternative.
+      </div>
+                   <div class="sentence" data-audio="audio/s58.wav" style="background-color: #dcdbdb">
+        (S58)However, this study has its limitations, including the scope of law,
+      </div>
+                  <div class="sentence" data-audio="audio/s59.wav">
+        (S59)which is focused only on consumer protection, and the limited size of the dataset, which may affect the generalizability of the findings.
+      </div>
+                      <div class="sentence" data-audio="audio/s60.wav" style="background-color: #dcdbdb">
+        (S60)For future work, we plan to expand the system's scope to include other areas of law,
+      </div>
+                    <div class="sentence" data-audio="audio/s61.wav">
+        (S61)such as the Civil and Commercial Code or business law. We also intend to enlarge the dataset to be more diverse and comprehensive,
+      </div>
+                          <div class="sentence" data-audio="audio/s62.wav" style="background-color: #dcdbdb">
+        (S62)which will allow us to further test and improve the system's generalization capabilities.
+      </div>
+             <div class="sentence" data-audio="audio/s63.wav">
+        (S63)This concludes my presentation. Thank you for your attention. I am now happy to answer any questions you may have.
+
+      </div>
+
+      <script>
+        // รอให้หน้าเว็บโหลดให้เสร็จก่อน
+        document.addEventListener("DOMContentLoaded", () => {
+          // เลือกทุก element ที่มี class 'sentence'
+          const sentences = document.querySelectorAll(".sentence");
+
+          sentences.forEach((sentence) => {
+            sentence.addEventListener("click", () => {
+              // 1. ดึงชื่อไฟล์เสียงจาก data-audio attribute
+              const audioSrc = sentence.getAttribute("data-audio");
+
+              // 2. ถ้ามีชื่อไฟล์เสียงอยู่
+              if (audioSrc) {
+                // 3. สร้าง Object เสียงขึ้นมาใหม่
+                const audio = new Audio(audioSrc);
+
+                // 4. สั่งให้เล่นเสียง
+                audio.play();
+
+                // --- ส่วนเสริม: เพิ่ม Effect ตอนกำลังเล่น ---
+                // เพิ่ม class 'playing' เพื่อเปลี่ยนสีพื้นหลัง
+                sentence.classList.add("playing");
+
+                // เมื่อเสียงเล่นจบ ให้เอา class 'playing' ออก
+                audio.addEventListener("ended", () => {
+                  sentence.classList.remove("playing");
+                });
+              }
+            });
+          });
+        });
+      </script>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
