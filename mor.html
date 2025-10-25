@@ -11,13 +11,81 @@
     <div id="header-placeholder"></div>
 
     <main>
-        <div class="content-container">
-            <h2>Morning Conversation</h2>
-            <p><strong>Alex:</strong> Good morning, Brenda! Did you sleep well?</p>
-            <p><strong>Brenda:</strong> Morning, Alex! I slept like a log. How about you?</p>
-            <p><strong>Alex:</strong> Pretty good, thanks. I'm just about to make some coffee. Would you like a cup?</p>
-            <p><strong>Brenda:</strong> That sounds perfect. Thank you!</p>
-            </div>
+<div class="sentence" data-audio="audio/mrr/mrr1.wav">
+    Good morning! Did you have a good night?
+    </div>
+
+    <div class="sentence" data-audio="audio/mrr/mrr2.wav" style="background-color: #dcdbdb;">
+    (S2)    but that's a slippery slope.
+    </div>
+
+    <div class="sentence" data-audio="audio/mrr/mrr3.wav">
+    (S3)    You're only in my head.
+    </div>
+
+    <div class="sentence" data-audio="audio/mrr/mrr4.wav" style="background-color: #dcdbdb;">
+    (S4)    We have to remember that.
+    </div>
+    
+    <div class="sentence" data-audio="audio/mrr/mrr5.wav">
+    (S5)    Shit, It's actually happened
+    </div>
+
+    <div class="sentence" data-audio="audio/mrr/mrr6.wav" style="background-color: #dcdbdb;">
+    (S6)    I'm talking to an imaginary person.
+    </div>
+
+    <div class="sentence" data-audio="audio/mrr/mrr7.wav">
+    (S7)    What I'm about to tell you is top secret,
+    </div>
+    <div class="sentence" data-audio="audio/mrr/mrr8.wav" style="background-color: #dcdbdb;">
+    (S8)    a conspiracy bigger than all of us.
+    </div>
+        <div class="sentence" data-audio="audio/mrr/mrr9.wav">
+    (S9)    There's a powerful group of people out there
+    </div>
+       <div class="sentence" data-audio="audio/mrr/mrr10.wav" style="background-color: #dcdbdb;">
+    (S10)   that are secretly running the world.
+    </div>
+           <div class="sentence" data-audio="audio/mrr/mrr11.wav">
+    (S11)  I'm talking about the guys no one knows about,
+    </div>
+    
+
+    
+    <script>
+        // รอให้หน้าเว็บโหลดให้เสร็จก่อน
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // เลือกทุก element ที่มี class 'sentence'
+            const sentences = document.querySelectorAll('.sentence');
+
+            sentences.forEach(sentence => {
+                sentence.addEventListener('click', () => {
+                    // 1. ดึงชื่อไฟล์เสียงจาก data-audio attribute
+                    const audioSrc = sentence.getAttribute('data-audio');
+
+                    // 2. ถ้ามีชื่อไฟล์เสียงอยู่
+                    if (audioSrc) {
+                        // 3. สร้าง Object เสียงขึ้นมาใหม่
+                        const audio = new Audio(audioSrc);
+
+                        // 4. สั่งให้เล่นเสียง
+                        audio.play();
+
+                        // --- ส่วนเสริม: เพิ่ม Effect ตอนกำลังเล่น ---
+                        // เพิ่ม class 'playing' เพื่อเปลี่ยนสีพื้นหลัง
+                        sentence.classList.add('playing');
+
+                        // เมื่อเสียงเล่นจบ ให้เอา class 'playing' ออก
+                        audio.addEventListener('ended', () => {
+                            sentence.classList.remove('playing');
+                        });
+                    }
+                });
+            });
+        });
+    </script>
     </main>
 
     <div id="footer-placeholder"></div>
