@@ -62,3 +62,13 @@
     }
     */
 }
+
+.sentence{
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to right, #ffffff, #f8f9fa);
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
